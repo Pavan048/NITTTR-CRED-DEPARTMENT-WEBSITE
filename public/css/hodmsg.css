@@ -1,0 +1,104 @@
+  .hodmsg{
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            
+        }
+
+        .card-container-msg{
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+       .card-msg{
+    width: 1200px; /* Fixed width for the card */
+    margin: 10px;
+    padding: 20px;
+    background-color: #f0f0f0; /* Light gray background color */
+    border: 2px solid #4caf50; /* Green border */
+    border-radius: 10px;
+    animation: fadeInLeft 2s ease;
+    float: left; /* Move the card to the left */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slight box shadow */
+}
+
+        #hod-mesg {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #007bff;
+            animation: fadeInUp 2s ease;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .hod-mesg-desc{
+           
+            text-align:justify;
+             margin-bottom: 20px;
+            animation: fadeInLeft 1s ease;
+            border-left: 2.5px solid #ff6b6b;
+            padding-left: 10px;
+        }
+        
+        .highlight-msg{
+            font-weight: bold;
+            color: #ff6b6b;
+        }
+
+
+
+
+
+
+        .contact-card-msg{
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-img-msg{
+            flex: 0 0 80px;
+            height: 180px;
+            border-radius: 50%;
+            margin-right: 20px;
+            object-fit: cover;
+            max-width: 100%; /* Allow the image to expand up to its original width */
+         width: 180px; /* Set a fixed width for the image */
+         /* Let the height adjust automatically to maintain the aspect ratio */
+        float: left; /* Move the image to the left */
+        margin-right: 20px; /* Space between image and content */
+        animation: fadeInLeft 1s ease;
+        }
+        .animated-img-msg{
+        max-width: 100%; /* Allow the image to expand up to its original width */
+         width: 180px; /* Set a fixed width for the image */
+        height: auto; /* Let the height adjust automatically to maintain the aspect ratio */
+        float: left; /* Move the image to the left */
+        margin-right: 20px; /* Space between image and content */
+        animation: fadeInLeft 1s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+

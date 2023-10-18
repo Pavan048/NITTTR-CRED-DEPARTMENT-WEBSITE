@@ -1,0 +1,70 @@
+
+/* Some basic styling for the menu and content sections */
+
+
+.menu-container {
+display: flex;
+justify-content: center;
+background-color: #f2f2f2;
+padding: 10px;
+}
+
+.menu-button {
+margin: 5px;
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+background-color: #4CAF50;
+color: white;
+font-size: 16px;
+cursor: pointer;
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 768px) {
+.menu-container {
+flex-direction: column;
+}
+}
+.content {
+  display: none;
+  padding: 20px;
+}
+
+.content.active {
+  display: block;
+}
+
+#instagram-feed {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+gap: 20px;
+padding: 20px;
+}
+
+.instagram-post {
+border: 1px solid #ccc;
+padding: 10px;
+border-radius: 8px;
+}
+
+.instagram-image {
+width: 100%;
+border-radius: 8px;
+}
+
+.instagram-caption {
+margin-top: 10px;
+}
+
+
+/* Your existing gallery-related styles */
+
+/* Styles for the Bootstrap modal */
+.modal-image {
+    width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+    margin: auto;
+  }
+  

@@ -1,0 +1,93 @@
+/* CSS for the popup gallery */  
+  .image-container {
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    list-style: none;
+  }
+
+  .image-container img {
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+  }
+
+.image-container img {
+transition: transform 0.3s;
+}
+
+.image-container img:hover {
+transform: scale(1.2);
+}
+.filterable_container.main-gallery .image-container{
+margin: 0;
+}
+
+.image-contain {
+ display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    list-style: none;
+}
+
+.image-contain img {
+  width: 500px;
+  height: 500px;
+  margin: 50px;
+}
+
+}
+.image-contain img {
+transition: transform 0.3s;
+margin: 10px;
+}
+
+.image-contain img:hover {
+transform: scale(1.2);
+}
+.filterable_container.main-gallery .image-contain{
+margin: 0;
+}
+
+
+
+
+.skill {
+    font-family: Arial, sans-serif;
+  
+}
+
+.container-skill {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header styles */
+.header-skill,.head-skill{
+ 
+    color:#007bff;
+    text-align:left;
+    font-size:35px;
+    padding: 20px 0px 0px;
+}
+
+.description-skill{
+   
+    line-height: 1.6;
+    text-align: justify;
+    min-width: 800;
+    
+   
+
+}
+
+/* Subheading styles */
+.subhead-skill {
+    color: #007bff;
+    margin-top: 20px;
+}

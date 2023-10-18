@@ -1,0 +1,118 @@
+.comming {
+  font-family: Arial, sans-serif;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ height: 100vh;
+ margin: 0;
+ background: linear-gradient(135deg, #82b74b, #eb9f7f, #56a8c8, #eb9f7f, #82b74b);
+ background-size: 800% 800%;
+ animation: gradientAnimation 4s ease infinite;
+}
+
+@keyframes gradientAnimation {
+ 0% {
+   background-position: 0% 50%;
+ }
+ 50% {
+   background-position: 100% 50%;
+ }
+ 100% {
+   background-position: 0% 50%;
+ }
+}
+
+.coming-soon-container {
+ text-align: center;
+ background-color: rgba(255, 255, 255, 0.9);
+ padding: 20px;
+ border-radius: 8px;
+ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ max-width: 400px;
+ margin: 0 auto;
+ animation: fadeIn 5s ease-in-out, pulsate 2s infinite;
+}
+
+@keyframes fadeIn {
+ 0% {
+   opacity: 0;
+ }
+ 100% {
+   opacity: 1;
+ }
+}
+
+@keyframes pulsate {
+ 0%, 100% {
+   transform: scale(1);
+ }
+ 50% {
+   transform: scale(1.1);
+ }
+}
+
+h1 {
+ font-size: 36px;
+ color: #333;
+ margin-bottom: 20px;
+}
+
+p {
+ font-size: 18px;
+ color: #666;
+ margin-bottom: 30px;
+}
+
+.countdown {
+ font-size: 24px;
+ color: #333;
+ font-weight: bold;
+}
+
+#timer {
+ font-size: 30px;
+ color: #FF5A5A;
+ margin-top: 10px;
+ animation: fadeInOut 1.5s infinite;
+}
+
+#timer.expired {
+ color: #666;
+}
+
+/* Additional animations */
+@keyframes fadeInOut {
+ 0%, 100% {
+   opacity: 0.4;
+ }
+ 50% {
+   opacity: 1;
+ }
+}
+
+@keyframes zoomInOut {
+ 0%, 100% {
+   transform: scale(1);
+ }
+ 50% {
+   transform: scale(1.2);
+ }
+}
+
+@keyframes slideInOut {
+ 0%, 100% {
+   transform: translateY(0);
+ }
+ 50% {
+   transform: translateY(-10px);
+ }
+}
+
+/* Apply animations to elements */
+.h1-animation {
+ animation: zoomInOut 3s infinite;
+}
+
+.countdown-animation {
+ animation: slideInOut 4s infinite;
+}

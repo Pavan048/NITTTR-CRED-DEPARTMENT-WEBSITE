@@ -1,0 +1,74 @@
+/* Global styles */
+.cdtp {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+.container-cdtp {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header styles */
+.header-cdtp,.head-cdtp{
+    background-color:ghostwhite;
+    color:#007bff;
+    text-align:left;
+    font-size:35px;
+    padding: 20px 0px 0px;
+}
+.header-nsdc,.header-pwd{
+       background-color:ghostwhite;
+    color:#007bff;
+    text-align:center;
+    font-size:35px;
+    padding: 20px 0px 0px;
+    
+}
+/* Image styles */
+.image-container-cdtp {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Description styles */
+.description-cdtp {
+    color: #333;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Subheading styles */
+.subhead-cdtp {
+    color: #007bff;
+    margin-top: 20px;
+}
+
+/* Activities section styles */
+.activity-list-cdtp {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Applying animations */
+.head-cdtp, .description-cdtp, .subhead-cdtp, .image-container-cdtp {
+    animation: fadeIn 1s ease-in-out;
+}
