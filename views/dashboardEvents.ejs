@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/dashboardevents.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Add New Event</h1>
+        <form action="/admin/dashboard/events/" method="post" id="events-form" enctype="multipart/form-data">
+            <label for="eventsImage">Select image:</label>
+            <input type="file" id="img" name="eventsImage" accept="image/*"><br>
+
+            <br><label>Title</label>
+            <input type="text" placeholder="Title of the Event" name="eventsTitle"><br>
+
+            <label>Timings</label>
+            <input type="text" placeholder="Timings like '' 09:00 AM - 11:00 AM '' Format" name="eventsTimings"><br>
+            <!-- date -->
+            <label>Date</label>
+            <input type="text" placeholder="Ex:- 26 " name="eventsDate"><br>
+            <!-- month year -->
+            <label>Month & Year</label>
+            <input type="text" placeholder="Ex:- jan 2024 " name="eventsMonth"><br>
+
+            <label > Details</label>
+            <input placeholder="Write something.." style="height:200px"type="text" name="eventsDetails"><br>
+            
+            <label> Speaker :</label>
+            <input type="text" placeholder="Speaker Name" name="eventsSpeaker"><br>
+            
+            <div style="text-align: center;">
+                <input type="submit">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

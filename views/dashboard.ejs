@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body>
+<div>
+    <h1>Welcome <%= user.username %></h1>
+    <p>Email: <%= user.email %></p>
+    <div class="center-container">
+        <a href="/admin/logout">
+            <button>LogOut</button>
+        </a>
+    </div>
+
+    <nav class="navbar">
+        <div class="navbar-logo">Admin Panel</div>
+        <ul class="navbar-menu">
+            <li><a href="/admin/dashboard/scroller">Scroller</a></li>
+            <li><a href="/admin/dashboard/internships">Internships</a></li>
+            <li><a href="/admin/dashboard/events">Events</a></li>
+            <li><a href="/admin/dashboard/updates">News And Updates</a></li>
+        </ul>
+    </nav>
+    <!-- scroller -->
+    <h1 class="center-heading">scroller crud</h1>
+  <div class="scroller-container">
+  <% scroller.forEach(item => { %>
+    <div class="scroller-card">
+      <div class="scroller-details">
+        <p class="scroller-description"><%= item.scrollerText %></p>
+        <p class="scrollerlink"><%= item.scrollerLink %></p>
+        <button ><a href="/admin/dashboard/scroller/<%= item.id %>" class="scroller-link">Delete</a></button>
+      </div>
+    </div>
+  <% }) %>
+</div>
+<!-- events -->
+
+<h1 class="center-heading">EVENTS</h1>
+<div class="event-cards-container">
+    <% events.forEach(event => { %>
+        <div class="event-card">
+            <div class="event-thumbnail">
+                <img src="/<%= event.eventsImage.replace(/\\/g, '/') %>" alt="Event Thumbnail">
+            </div>
+            <div class="event-details">
+                <h2 class="event-title"><%= event.eventsTitle %></h2>
+                <p class="event-date"><%= event.eventsDate %></p>
+                <p class="event-date"><%= event.eventsMonth %></p>
+                <p class="event-time"><%= event.eventsTimings %></p>
+                <p class="event-description"><%= event.eventsDetails %></p>
+                <p class="event-speaker">Speaker: <%= event.eventsSpeaker %></p>
+                <a href="/admin/dashboard/event/delete/<%= event.id %>" class="event-link">Delete</a> 
+            </div>
+        </div>
+    <% }); %>
+</div>
+
+        
+
+
+<!-- internship----------- -->
+<!-- internship----------- -->
+<h1 class="center-heading">internship</h1>
+<div class="internship-container">
+    <% internship.forEach(intern => { %>
+      <div class="internship-card">
+        <div class="internship-thumbnail">
+          <img src="/<%= intern.internshipImage.replace(/\\/g, '/') %>" alt="internship Thumbnail">
+        </div>
+        <div class="internship-details">
+          <p class="internship-domain"><%= intern.internshipDomain %></p>
+          <h2 class="internship-title"><%= intern.internshipTitle %></h2>
+          <p class="internship-description"><%= intern.internshipDetails %></p>
+          <p class="internship-form-link"><%= intern.internshipLink %></p>
+          <a href="/admin/dashboard/internships/delete/<%= intern.id %>" class="internship-link">Delete</a>
+        </div>
+      </div>
+    <% }) %>
+</div>
+
+<!-- New's and Upadtes -->
+<section>
+  <h1 class="center-heading">New's and Updates</h1>
+  <div class="news-container">
+    <% updates.forEach(update => { %>
+      <!--card1-->
+      <div class="news-card">
+        <div class="news-thumbnail">
+          <img src="/<%= update.updatesImage.replace(/\\/g, '/') %>" alt="Event Thumbnail">
+        </div>
+        <div class="news-details">
+          <p class="news-speaker"><%= update.updatesSpeakerName %></p>
+          <p class="news-speaker"><%= update.updatesIn %></p>
+          <h2 class="news-title"><%= update.updatesTitle %></h2>
+          <p class="news-description"><%= update.updatesDetails %></p>
+          <p class="news-readmorelink"><%= update.updatesLink %></p>
+          <a href="/admin/dashboard/updates/delete/<%= update.id %>" class="news-link">Delete</a>
+        </div>
+      </div>
+    <% }) %>
+  </div>
+</section>
+<!-- Query Handler -->
+<!-- <h1 class="center-heading">Query Handler</h1>
+
+
+  </div>
+</div>
+
+</div>
+
+
+</body>
+</html>

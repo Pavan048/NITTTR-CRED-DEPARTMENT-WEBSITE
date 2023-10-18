@@ -1,0 +1,388 @@
+<%- include('layout/header') %>
+<!-- slider-start -->
+<div class="slider-area pos-relative">
+    <div class="slider-active">
+        <div class="single-slider slider-height d-flex align-items-center justify-content-center" style="background-image: url(img/backg.jpg);">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-9 col-md-12">
+                        <div class="slider-content slider-content-2">
+                            <h1 class="white-color f-700" data-animation="fadeInUp" data-delay=".7s"><span>Centre for Rural and Entrepreneurship Development</span><br></h1>
+                            <p data-animation="fadeInUp" data-delay="1.3s">Innovation Distinguishes between a leader and a follower</p>
+                            <button class="theme-btn" data-animation="fadeInUp" data-delay="1.7s"><span class="btn-text">View More</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="single-slider slider-height d-flex align-items-center justify-content-center" style="background-image: url(img/nitttr_mbb.jpg);">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-8 col-md-12 offset-xl-2">
+                        <div class="slider-content slider-content-2 text-center">
+                            <h1 class="white-color f-700" data-animation="fadeInUp" data-delay=".7s"><span>Centre for Rural and Entrepreneurship Development</span><br></h1>
+                            <p data-animation="fadeInUp" data-delay="1.4s">Innovation Distinguishes between a leader and a follower</p>
+                            <button class="theme-btn" data-animation="fadeInUp" data-delay="1.6s"><span class="btn-text">View More</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="single-slider slider-height d-flex align-items-center justify-content-center" style="background-image: url(img/nitttr_main.jpg);">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-9 col-md-12">
+                        <div class="slider-content slider-content-2">
+                            <h1 class="white-color f-700" data-animation="fadeInUp" data-delay=".7s"><span>Centre for Rural and Entrepreneurship Development</span><br></h1>
+                            <p data-animation="fadeInUp" data-delay="1.4s">Innovation Distinguishes between a leader and a follower</p>
+                            <button class="theme-btn" data-animation="fadeInUp" data-delay="1.6s"><span class="btn-text">View More</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- slider-end -->
+<div class="hwrap">
+    <div class="hmove">
+      <% scroller.forEach(item => { %>
+        <div class="hitem"><%= item.scrollerText %> || <a href="<%= item.scrollerLink %>">View more</a></div>
+      <% }) %>
+    </div>
+  </div>
+      </div>
+    </div>
+
+<!-- about start -->
+<div id="about" class="about-area pt-100 pb-70">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-7 col-lg-7">
+                <div class="about-title-section mb-30">
+                    <h1>About Us</h1>
+                    <p>
+                 Centre for Rural and Entrepreneurship Development (CRED) offers a comprehensive range of programs and initiatives aimed at promoting rural development, entrepreneurship and skill development. These include various training programs to enhance entrepreneurial skills, fostering entrepreneurship in rural communities, supporting innovative ideas, conducting impact studies of government schemes related to rural development, providing skill development training, organizing Training of Trainers (ToT) and Training of Assessors (ToA) programs.</p>
+                
+<p>
+CRED collaborates with prominent skill development organizations such as the National Skill Development Corporation (NSDC), Tamil Nadu Skill Development Corporation (TNSDC), and other skilling agencies. This partnership aims to enhance and strengthen skill development initiatives, ensuring a more comprehensive and effective approach towards developing the skills of individuals in rural areas. By forging with these agencies, the center leverages its expertise, resources, and networks to create impactful skill development opportunities and empower individuals with relevant skills for better economic prospects and livelihoods. </p>
+                    <button class="theme-btn blue-bg-border mt-20"><span class="btn-text">admit now</span></button>
+                </div>
+            </div>
+            <div class="col-xl-5 col-lg-5">
+                <div class="about-right-img mb-30">
+                    <img src="img/WhatsApp%20Image%202023-07-19%20at%209.51.15%20AM.jpeg" alt="">
+                </div>
+            </div>
+        </div>
+      
+    </div>
+</div>
+<!-- about end -->
+<!-- courses start -->
+<section>
+<div id="courses" class="courses-area courses-bg-height pt-100 pb-70" style="background-image: url(img/courses/courses_bg.png);">
+    <div class="container">
+        <div class="row-courses">
+            <div class="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+                <div class="section-title mb-50 text-center">
+                    <div class="section-title-heading mb-20">
+                        <h1 class="white-color">Our Latest Interships</h1>
+                    </div>
+                    <div class="section-title-para">
+                        <p class="white-color"> Introducing new Innovations to the World</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="courses-list">
+            <div class="row courses-active">
+                <% internship.forEach(intern => { %>
+                    <!-- card start -->
+                    <div class="nav_courses">
+                        <div class="courses-wrapper course-radius-none mb-30">
+                            <div class="courses-thumb">
+                                <a href="#"><img src="/<%= intern.internshipImage.replace(/\\/g, '/') %>" alt="internship image"></a>
+                            </div>
+        
+                            <div class="course-main-content clearfix">
+                                <div class="courses-content">
+                                    <div class="courses-category-name">
+                                        <span>
+                                            <a href="#"><%= intern.internshipDomain %></a>
+                                        </span>
+                                    </div>
+                                    <div class="courses-heading">
+                                        <h1><a href="#"><%= intern.internshipTitle %></a></h1>
+                                    </div>
+                                    <div class="courses-para"><%= intern.internshipDetails %></div>
+                                </div>
+                            </div>
+                            <div class="courses-wrapper-bottom clearfix">
+        
+                                <div class="courses-button f-right">
+                                    <a href="<%= intern.internshipLink %>">Apply NOW</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <% }) %>
+            </div>
+        </div>
+        
+    </div>
+</div>
+</section>
+<!-- courses end -->
+
+
+<!--profile cards-->
+<section><br>
+<div class="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2 col-md-10 offset-md-1" id="profile_cards" >
+                <div class="section-title mb-50 text-center">
+                    <div class="section-title-heading mb-20">
+                        <h1 class="primary-color">Our Professionals</h1>
+                    </div>
+                    <div class="section-title-para">
+                        <p class="gray-color">Belis nisl adipiscing sapien sed malesu diame lacus eget erat Cras mollis scelerisqu Nullam arcu liquam here was consequat.</p>
+                    </div>
+                </div>
+            </div>
+<div class ="profile_cards" >
+
+<div class="card">
+    <div class="card-image">
+        <img src="img/cred_profile_pics/cred_profile_pic1.jpeg" alt="Profile image">
+    </div>
+    <p class="name">Dr.K.S.Giridharan</p><h6>M.Tech., Ph.D</h6>
+    <p> Professor and Head</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur delectus, mollitia tenetur libero quam recusandae alias in incidunt.<a href="https://cred-giridharan.netlify.app/"> view profile</a></p>
+    <div class="socials">
+   <a href="https://www.instagram.com/ksgnitttr/"> <button class="instagram"><i class="fab fa-instagram"></i></button></a>
+        <a href="https://www.facebook.com/Giridharan%20Krishnapuram%20Subramaniyam"> <button class="facebook"><i class="fab fa-facebook"></i></button></a>
+        <a href="https://www.linkedin.com/in/giridharan-k-s-nitttr-346499140"> <button class="linkedin"><i class="fab fa-linkedin"></i></button></a>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-image">
+        <img src="img/cred_profile_pics/cred_profile_pic2.png" alt="Profile image">
+    </div>
+    <p class="name">Dr. P.JAKULIN DIVYA MARY</p><h6> M. Tech., PhD</h6>
+    <p>Assistant Professor</p>
+    <p>Centre for Rural and Entrepreneurship Development, 
+National Institute of Technical Teachers Training and Research, 
+Chennai<a href="#"> view profile</a></p>
+    <div class="socials">
+       <a href="#"> <button class="instagram"><i class="fab fa-instagram"></i></button></a>
+        <button class="facebook"><i class="fab fa-facebook"></i></button>
+        <button class="linkedin"><i class="fab fa-linkedin"></i></button>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-image">
+        <img src="img/cred_profile_pics/cred_profile_pic3.jpeg" alt="Profile image">
+    </div>
+    <p class="name">Dr. M. Anil Kumar</p><h6> M. Tech., PhD</h6>
+    <p> Associate Professor</p>
+    <p>Centre for Rural and Entrepreneurship Development, 
+National Institute of Technical Teachers Training and Research, 
+Chennai<a href="#"> view profile</a></p>
+    <div class="socials">
+        <button class="instagram"><i class="fab fa-instagram"></i></button>
+        <button class="facebook"><i class="fab fa-facebook"></i></button>
+        <button class="linkedin"><i class="fab fa-linkedin"></i></button>
+    </div>
+</div>
+</div>
+</section>
+<!-- events -->
+<!--end-->
+<div id="events" class="events-area events-bg-height pt-100 pb-95" style="background-image: url(img/courses/courses_bg.png)">
+    <div class="container">
+        <div class="row-events">
+            <div class="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+                <div class="section-title mb-50 text-center">
+                    <div class="section-title-heading mb-20">
+                        <h1 class="white-color">Upcoming Events</h1>
+                    </div>
+                    <div class="section-title-para">
+                        <p class="white-color">Recognizing the importance of rural entrepreneurship</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- event container start ---------------------------------------------------------->
+        <div class="events-list mb-30">
+            <div class="row-events">    
+                <!-- card start -->
+                <% events.forEach(event => { %>
+                    <div class="single-events mb-30">
+                        <div class="events-wrapper">
+                            <div class="events-inner d-flex">
+                                <div class="events-thumb">
+                                    <img src="/<%= event.eventsImage.replace(/\\/g, '/') %>" alt="event">
+                                </div>
+                                <div class="events-text white-bg">
+                                    <div class="event-text-heading mb-20">
+                                        <div class="events-calendar text-center f-left">
+                                            <span class="date"><%= event.eventsDate %></span>
+                                            <span class="month"><%= event.eventsMonth %></span>
+                                        </div>
+                                        <div class="events-text-title clearfix">
+                                            <a href="#">
+                                                <h4><%= event.eventsTitle %></h4>
+                                            </a>
+                                            <div class="time-area">
+                                                <span class="ti-time"></span>
+                                                <span class="published-time"><%= event.eventsTimings %></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="events-para">
+                                        <p><%= event.eventsDetails %></p>
+                                    </div>
+                                    <div class="events-speaker">
+                                        <h2>Speaker : <span><%= event.eventsSpeaker %></span></h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                   </div> 
+                <% }); %>
+             </div>
+     </div>
+    </div>
+</div>
+<!-- events end -->
+
+
+<!-- video start -->
+<div class="video-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="video-wrapper text-center">
+                    <div class="video-content">
+                        <a class="popup-video" href="https://www.youtube.com/watch?v=6h8owo8cqug"><img src="img/video/play_icon.png" alt=""></a>
+                        <span>Watch Our Latest Video</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- video end -->
+<!-- updates-->
+<section id="nav_news">
+    <div class="boxed_wrapper">
+        <section class="latest-blog-area">
+            <div class="container inner-content">
+                <div class="sec-title text-center">
+                    <div class="title">
+                        <h1>News and Updates</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- Start single blog post -->
+                    <% updates.forEach(update => { %>
+                    <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+                        <div class="single-blog-post wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+                            <div class="img-holder">
+                                <img src="/<%= update.updatesImage.replace(/\\/g, '/') %>" alt="Awesome Image">
+                                <div class="overlay-style-two"></div>
+                                <div class="overlay">
+                                    <div class="box">
+                                        <div class="link-icon">
+                                            <a href="#"><span class="flaticon-zoom"></span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-holder">
+                                <div class="post-date">
+                                    <h3><%= update.updatesDate %><span><%= update.updatesMonth %></span></h3>
+                                </div>
+                                <div class="meta-box">
+                                    <ul class="meta-info">
+                                        <li>By <a href="#"><%= update.updatesSpeakerName %></a></li>
+                                        <li>In <a href="#"><%= update.updatesIn %></a></li>
+                                    </ul>
+                                </div>
+                                <h3 class="blog-title"><a href="#"><%= update.updatesTitle %></a></h3>
+                                <div class="text">
+                                    <p id="updateDetails"><%= update.updatesDetails %></p>
+                                    <a class="btn-two" href="<%= update.updatesLink %>">Read More<span class="flaticon-next"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <% }); %>
+                    <!-- End single blog post -->
+                </div>
+            </div>
+        </section>
+    </div>
+</section>
+
+<!--END-->
+
+  <!-- counter start -->
+<div class="counter-area">
+    <div class="container pt-90 pb-65">
+        <div class="row">
+            <div class="col-xl-3 col-lg-3 col-md-3">
+                <div class="couter-wrapper mb-30 text-center">
+                    <img src="img/counter/counter_icon1.png" alt="">
+                    <span class="counter">10532</span>
+                    <h3>Satisfied Students</h3>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3">
+                <div class="couter-wrapper mb-30 text-center">
+                    <img src="img/counter/counter_icon2.png" alt="">
+                    <span class="counter">7985</span>
+                    <h3>Courses Complated</h3>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3">
+                <div class="couter-wrapper mb-30 text-center">
+                    <img src="img/counter/counter_icon3.png" alt="">
+                    <span class="counter">1000000</span>
+                    <h3>Skilled Trainees</h3>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3">
+                <div class="couter-wrapper mb-30 text-center">
+                    <img src="img/counter/counter_icon4.png" alt="">
+                    <span class="counter">354</span>
+                    <h3>Expert Advisors</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- counter end -->
+
+
+<!--    Instagram And Facebook-->
+<div style="padding: 10px; margin: 0 auto; max-width: 1000px;">
+
+<div class="block-container">
+<!-- Facebook Block -->
+     <div class="blockk facebook-block">
+<iframe frameborder="0" width="600" height="600" src="https://www.facebook.com/v9.0/plugins/page.php?adapt_container_width=true&amp;app_id=113869198637480&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df310a21b6f5a654%26domain%3Ddevelopers.facebook.com%26origin%3Dhttps%253A%252F%252Fdevelopers.facebook.com%252Ff3cf179cd85d47c%26relation%3Dparent.parent&amp;container_width=600&amp;height=600&amp;hide_cover=false&amp;href=https%3A%2F%2Fwww.facebook.com%2F/profile.php?id=100066810970230&amp;locale=en_US&amp;sdk=joey&amp;show_facepile=false&amp;small_header=false&amp;tabs=timeline&amp;width=500"></iframe><script type="text/javascript" src="https://www.embedista.com/j/fbwidget.js"></script><div id="fbroot"></div><div class="fblike" data-width="" data-layout="" data-action="" data-size="" data-share="true"></div>
+</div>
+
+<!-- Instagram Block -->
+<div class="blockk instagram-block">
+  <!-- Instagram Embed Code -->
+  <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/cred_gallery/" data-instgrm-version="12" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:undefinedpx;height:undefinedpx;max-height:100%; width:undefinedpx;"><div style="padding:16px;"> <a id="main_link" href="cred_nitttrc" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;"> View this post on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="cred_nitttrc" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">Shared post</a> on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;">Time</time></p></div></blockquote><script src="https://www.instagram.com/embed.js"></script><script type="text/javascript" src="https://www.embedista.com/j/instagramfeed.js"></script><div style="overflow: auto; position: absolute; height: 0pt; width: 0pt;"><a href="https://www.embedista.com/instagramfeed">Embed Instagram Post</a> Code Generator</div></div><style>.boxes3{height:175px;width:153px;} #n img{max-height:none!important;max-width:none!important;background:none!important} #inst i{max-height:none!important;max-width:none!important;background:none!important}</style>
+  </div>
+  </div>
+
+<!--ENd-->
+    
+   
+<%- include('layout/footer') %>

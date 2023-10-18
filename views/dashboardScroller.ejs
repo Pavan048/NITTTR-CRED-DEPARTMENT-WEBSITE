@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form with Two Fields</title>
+  <link rel="stylesheet" href="/css/dashboardScroller.css">
+</head>
+<body>
+  <form action="/admin/dashboard/scroller" method="post">
+    <div class="form-group">
+      <label for="ScrollerText">Scroller Text</label>
+      <input type="text" id="field1" name="ScrollerText" required>
+    </div>
+
+    <div class="form-group">
+      <label for="ScrollerLink">Sroller Link</label>
+      <input type="text" id="field2" name="ScrollerLink" required>
+    </div>
+
+    <div class="center">
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+</body>
+</html>

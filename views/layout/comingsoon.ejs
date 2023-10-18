@@ -1,0 +1,40 @@
+
+<section class="comming">
+    <div class="coming-soon-container">
+      <h1>Coming Soon</h1>
+      <p>We are working hard to bring you something awesome!</p>
+      <div class="countdown">
+        <p>Countdown Timer:</p>
+        <p id="timer">00:00:00</p>
+      </div>
+    </div>
+  
+  
+    <script>
+    // Set the date to your target release date
+    const targetDate = new Date("2023-12-31").getTime();
+  
+    // Update the countdown every second
+    const countdown = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+  
+      // Calculate the remaining days, hours, minutes, and seconds
+      const days = Math.floor(distance / (100000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  
+      // Display the countdown timer
+      document.getElementById("timer").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+  
+      // If the countdown is over, display a message
+      if (distance < 0) {
+        clearInterval(countdown);
+        document.getElementById("timer").innerHTML = "EXPIRED";
+      }
+    }, 1000);
+  </script>
+  </section>
+
+

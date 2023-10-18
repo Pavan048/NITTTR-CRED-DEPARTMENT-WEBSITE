@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/dashboardupdates.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Add New's & Updates</h1>
+        <form action="/admin/dashboard/updates" method="post" id="updates-form" enctype="multipart/form-data">
+            <label for="updatesImage">Select image:</label>
+            <input type="file" id="img" name="updatesImage" accept="image/*"><br>
+
+            <br><label> Speaker or By :</label>
+            <input type="text" placeholder="Speaker Name" name="updatesSpeakerName"><br>
+
+            <br><label> In :</label>
+            <input type="text" placeholder="Speaker Name" name="updatesIn"><br>
+            
+            <br><label> Date :</label>
+            <input type="text" placeholder="Ex:25" name="updatesDate"><br>
+            
+            <br><label> Month :</label>
+            <input type="text" placeholder="Ex:MAR 2023" name="updatesMonth"><br>
+
+            <br><label>Title</label>
+            <input type="text" placeholder="Title of the Event" name="updatesTitle"><br>
+
+            <label > Details</label>
+            <input placeholder="Write something.." style="height:200px" type="text"  name="updatesDetails"><br>
+            
+            <br><label>Read More Document Link:</label>
+            <input type="text" placeholder="Title of the Event" name="updatesLink"><br>
+
+            <div style="text-align: center;">
+                <input type="submit">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<%- include('layout/header') %>
+<div class="menu-container">
+    <a href="/gallery" class="menu-button">All</a>
+    <a href="/campusg" class="menu-button">Campus</a>
+    <a href="/deptg" class="menu-button">Department</a>
+    <a href="/eventsg" class="menu-button">Events</a>
+    <a href="/projectg" class="menu-button">projects</a>
+  </div>
+    <div id="instagram-feed">
+  
+    <script>
+      const accessToken = 'IGQVJYaldvY28tX1VXdTk1RE9mclJrVUp2VWNKODBLTXNDN3NxWlVUMlYyYWpROXVZAR29ZAaTZACV0RhM1h1cWFMeC1xSzdJcEVBX0VLVW5Xc3RMTHlfZAHJHLU1rd3lJalVjdmVkV09Ca3BlMTl1ZA1ZAMLQZDZD';
+      const apiUrl = `https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,permalink,thumbnail_url,username,timestamp&access_token=${'IGQVJYaldvY28tX1VXdTk1RE9mclJrVUp2VWNKODBLTXNDN3NxWlVUMlYyYWpROXVZAR29ZAaTZACV0RhM1h1cWFMeC1xSzdJcEVBX0VLVW5Xc3RMTHlfZAHJHLU1rd3lJalVjdmVkV09Ca3BlMTl1ZA1ZAMLQZDZD'}`;
+
+      // Function to fetch Instagram data
+      async function fetchInstagramData() {
+        try {
+          const response = await fetch(apiUrl);
+          const data = await response.json();
+          return data.data;
+        } catch (error) {
+          console.error('Error fetching data:', error);
+          return [];
+        }
+      }
+
+      // Function to render Instagram feed with filtered posts
+      async function renderInstagramFeed(hashtag) {
+        const feedContainer = document.getElementById('instagram-feed');
+        feedContainer.innerHTML = ''; // Clear previous feed
+
+        const instagramData = await fetchInstagramData();
+        const filteredPosts = instagramData.filter(post => {
+          return post.caption && post.caption.toLowerCase().includes(hashtag.toLowerCase());
+        });
+
+        filteredPosts.forEach(post => {
+          const postElement = document.createElement('div');
+          postElement.classList.add('instagram-post');
+
+          const imageElement = document.createElement('img');
+          imageElement.src = post.media_url;
+          imageElement.alt = post.caption || 'Instagram Image';
+          imageElement.classList.add('instagram-image');
+
+          const captionElement = document.createElement('p');
+          captionElement.textContent = post.caption;
+          captionElement.classList.add('instagram-caption');
+
+          postElement.appendChild(imageElement);
+          feedContainer.appendChild(postElement);
+        });
+      }
+
+      // Call the renderInstagramFeed function with the desired hashtag
+      const hashtagToFilter = 'campus'; // Replace 'your_hashtag' with the desired hashtag
+      renderInstagramFeed(hashtagToFilter);
+    </script>
+
+  </div>
+<%- include('layout/footer') %>
