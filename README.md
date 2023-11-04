@@ -15,9 +15,9 @@ This project is a dynamic website developed during an internship at the CRED dep
 - Instagram API (or other relevant API for live updates)
 
 ## Features
-- Dynamic updates of events, news, and internship opportunities.
+- Dynamic updates of scrolls,events, news, and internship opportunities.
 - Scrolling functionality for easy navigation.
-- Real-time live updates from Instagram to showcase department activities.
+- Real-time live updates from Instagram and facebook to showcase department activities.
 - User authentication with JWT for admin panel access.
 
 ## Installation
