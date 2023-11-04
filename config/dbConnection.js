@@ -7,6 +7,7 @@ const connectDb = async () =>{
         console.log("Database connected :" ,connect.connection.host,connect.connection.name);
         
     } catch (error) {
+        console.log("Check Your Internet Connectivity...!")
         console.log(error);
         process.exit(1);
         
