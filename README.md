@@ -1,6 +1,9 @@
 ﻿
 # Dynamic Website for CRED Department at NITTTR
 
+Check out the live demo of my application hosted on Render: [Live Demo](https://cred-nitttr.onrender.com/)
+
+
 ## Overview
 This project is a dynamic website developed during an internship at the CRED department of the National Institute of Technical Teachers Training and Research (NITTTR), Chennai. The website is designed to provide dynamic updates on events, news, internships, and real-time Instagram updates.
 
