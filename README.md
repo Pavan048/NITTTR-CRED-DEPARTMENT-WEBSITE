@@ -52,11 +52,6 @@ To access the admin panel:
 - Use JWT authentication for admin privileges.
 - In the admin panel, you can create, update, or delete events, news, internships, and Instagram updates.
 
-## Database
-The project uses MongoDB as its database. You can provide information about the database structure, collections, and relevant details in this section.
-
-## Live Instagram Updates
-Explain how the live Instagram updates are implemented, including the use of the Instagram API or any other relevant technology.
 
 ## Contributing
 We welcome contributions to this project. To contribute, follow these steps:
@@ -70,8 +65,3 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Contact
 For any inquiries or questions about the project, please feel free to contact us at [pavankrishna048@example.com].
-
-## Additional Information
-- Include any other relevant information, known issues, or future development plans related to the project.
-
----
